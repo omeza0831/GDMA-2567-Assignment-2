@@ -18,8 +18,8 @@
 	
 <header> <!-- place background image on header -->
 	<div class="wrapper">
-		<div class="row float-right">
-			<nav class="col-1-2">
+		<div class="row float-right col-1-2">
+			<nav>
 				<ul>
 					<li><a href="#services">solutions</a></li>
 					<li><a href="#about">about</a></li>
@@ -101,7 +101,7 @@
 </section>
 	
 <section id="about"> <!-- place bg color on this -->
-	<div class="wrapper row">
+	<div class="wrapper row flex-reverse">
 		<div class="col-2-3">
 			<header>
 				<h2>About</h2>
@@ -180,7 +180,7 @@
 	</div>
 </section>
 	
-<div class="wrapper row" id="connect">
+<div class="wrapper row flex-reverse" id="connect">
 	<section class="col-1-2"> <!-- form -->
 		<header>
 			<h2>Connect With Us</h2>
@@ -192,35 +192,51 @@
 			<label for="email">Email</label>
 			<input id="email" type="email" name="email">
 			
-			<p>Fields of Interest</p>
-			<label for="e-pay">e-pay</label>	
-			<input id="e-pay" type="checkbox" name="interest" value="e-pay">
-			
-			<label for="payment-plans">payment plans</label>	
-			<input id="payment-plans" type="checkbox" name="interest" value="payment-plans">
-			
-			<label for="refunds">refunds</label>	
-			<input id="refunds" type="checkbox" name="interest" value="refunds">
-			
-			<label for="store">store</label>	
-			<input id="store" type="checkbox" name="interest" value="store">
-			
-			<label for="hosted-payments">hosted payments</label>	
-			<input id="hosted-payments" type="checkbox" name="interest" value="hosted-payments">
-			
-			<label for="individual">individual</label>	
-			<input id="individual" type="checkbox" name="interest" value="individual">
-			
-			<label for="payment-plans">payment plans</label>	
-			<input id="payment-plans" type="checkbox" name="interest" value="payment-plans">
-			
-			<label for="payment-plans">payment plans</label>	
-			<input id="payment-plans" type="checkbox" name="interest" value="payment-plans">
+			<fieldset class="row">
+				<p>Fields of Interest</p>
+				<div class="col-1-2">
+					<label>	
+					<input id="e-pay" type="checkbox" name="interest" value="e-pay">
+					e-pay</label>
+
+					<label>	
+					<input id="managed-payment-plans" type="checkbox" name="interest" value="managed-payment-plans">
+					actively managed payment plans</label>
+
+					<label> 	
+					<input id="student-refunds" type="checkbox" name="interest" value="student-refunds">
+					student choice refunds</label>
+
+					<label>	
+					<input id="sponsored-payments" type="checkbox" name="interest" value="sponsored-payments">
+					sponsored payments</label>
+				</div>
+
+				<div class="col-1-2">
+					<label>	
+					<input id="cashiering" type="checkbox" name="interest" value="cashiering">
+					cashiering</label>
+
+					<label>	
+					<input id="hosted-payments" type="checkbox" name="interest" value="hosted-payments">
+					hosted payments</label>
+
+					<label>	
+					<input id="e-store" type="checkbox" name="interest" value="e-store">
+					e-store</label>
+
+					<label>	
+					<input id="refunds" type="checkbox" name="interest" value="refunds">
+					refunds</label>
+				</div>
+			</fieldset>
 			
 			<p>Message</p>
-			<textarea name="feedback" rows="5" cols="50"></textarea>
+			<textarea name="feedback" rows="5" cols="63"></textarea>
 			
-			<p><a href="#">submit</a></p>
+			<div class="float-right">
+				<p><a href="#">submit</a></p>
+			</div>
 	
 		</form>
 	</section>
@@ -250,12 +266,10 @@
 	
 <footer>
 	<div class="wrapper row">
-		<div class="col-1-2">
+		<div class="col-1-2" id="sprites">
 			<ul>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				
+				<li><a href="https://twitter.com" target="_blank"><span>twitter</span></a></li>
+				<li><a href="https://facebook.com" target="_blank"><span>facebook</span></a></li>				
 			</ul>
 		</div>
 		<nav class="col-1-2">

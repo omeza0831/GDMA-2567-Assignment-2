@@ -34,7 +34,7 @@
 	text-align: center;
 }
 
-input, form p, nav li {
+form p, nav li {
 	display: inline-block;
 }
 
@@ -50,6 +50,18 @@ ul li a {
 	line-height: 2rem;
 }
 
+a {
+	text-decoration: none;
+}
+
+ul li a, #full-name label, #email label {
+	font-weight: 700;
+}
+
+h3, body > header:first-of-type .col-1-2 p a, ul li a, form p a, fieldset label {
+	text-transform: uppercase;
+}
+
 /*----- 1.1 - Headings -----*/
 h1 {
 	font-size: 3.5rem;
@@ -57,39 +69,56 @@ h1 {
 	font-weight: 300;
 }
 
-a {
-	text-decoration: none;
-}
-
-ul li a {
-	font-weight: 700;
-}
-
 h2 {
 	font-size: 3rem;
-	font-weight: 500;
 }
 
-h3 {
+h3, h2 {
 	font-weight: 500;
 }
 
 /*----- 1.2 - Body Copy -----*/
-
-h3, body > header:first-of-type .col-1-2 p a, ul li a {
-	text-transform: uppercase;
-}
-
 #services .float-none {
 	font-size: 2rem;
 	line-height: 3rem;
 }
 
-/*----- 1.3 - Buttons -----*/
+#upcoming section p:first-of-type {
+	font-weight: 900;
+}
 
+/*----- 1.3 - Buttons -----*/
+footer #sprites li:first-child a {
+	background: url("../img/twitter-icon.png") no-repeat 0 0;
+}
+
+footer #sprites li:second-child a {
+	background: url("../img/facebook-icon.png") no-repeat 0 0;
+}
+
+footer #sprites ul li {
+	width: 40px;
+	height: 40px;
+}
+
+footer #sprites li a:hover {
+	background-position: 0 -20px;
+}
 
 
 /*----- 1.4 - Forms -----*/
+#full-name, #email, form p {
+	display: block;
+}
+
+fieldset {
+	border: none;
+}
+
+/*----- 1.5 - Lists -----*/
+footer ul li {
+	list-style: none;
+}
 
 
 /*=====
@@ -97,45 +126,60 @@ h3, body > header:first-of-type .col-1-2 p a, ul li a {
 =====*/
 
 /*----- 2.1 - Main Menu -----*/
+nav li {
+	display: inline-block
+}
+
 nav ul {
 	text-align: right;
-	display: inline-flex;
+	padding: 0;
 }
 
 /*=====
 4.0 - Media
 =====*/
-
+.img-responsive {
+	max-width: 100%;
+	display: block;
+	height: auto;
+}
 
 /*=====
 5.0 - Utility 
 =====*/
+.wrapper {
+	width: 65%;
+}
+
+a span {
+	display: none;
+}
 
 /*----- 5.1 - Background Colors -----*/
 body > header:first-of-type {
 	background: url("../img/bg-header.jpg") no-repeat 0 0 ;
 	background-size: cover;
-	height: 950px;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	-moz-background-size: cover;
+	height: 60rem;
 }
 
-body > header:first-of-type .col-1-2 p a {
+body > header:first-of-type .col-1-2 p a, form p a {
 	background-color: #323232;
 }
 
-body > header:first-of-type .col-1-2 p a:hover {
+body > header:first-of-type .col-1-2 p a:hover, form p a:hover {
 	background-color: #008793;
 }
 
-#about {
+#about, footer {
 	background-color: #f2f2f2;
 }
 
 /*----- 5.2 - Text Colors -----*/
-h1 {
-	color: #fff;
-}
-
-body > header:first-of-type .col-1-2 p a {
+body > header:first-of-type .col-1-2 p a, form p a, h1 {
 	color: #fff;
 }
 
@@ -160,8 +204,24 @@ h1 {
 	margin-top: 20rem;
 }
 
-body > header:first-of-type .col-1-2 p a {
-	padding: 1rem 5rem;
+#full-name, #email {
+	height: 3rem;
+}
+
+#full-name, #email, textarea {
+	width: 32rem;
+}
+
+textarea {
+	height: 6rem;
+}
+
+form div p:last-of-type {
+	margin: 2rem 0 10rem 0;
+}
+
+body > header:first-of-type .col-1-2 p a, form p a {
+	padding: 1rem 4.5rem;
 }
 
 ul li:first-child, ul li:nth-child(2), ul li:nth-child(3){
@@ -189,7 +249,7 @@ ul li:first-child, ul li:nth-child(2), ul li:nth-child(3){
 	margin-top: 5rem;
 }
 
-h2 {
+h2, fieldset input {
 	margin: 1rem 0;
 }
 
@@ -197,17 +257,24 @@ h2 {
 	padding: 6rem 0;
 }
 
+input {
+	margin: 1rem 0 2rem 0;
+}
 
+footer nav {
+	margin-top: 1.5rem;
+}
 
-
-
+fieldset label {
+	display: block;
+}
 
 @media screen and (max-width:480px) {
 	
 		/*=====
 	1.0 - Typography
 	=====*/
-		.col-1-4, .col-1-3, h2, h3 {
+		.col-1-4, .col-1-3, h2, h3, h1 {
 		text-align: center;
 	}
 	
@@ -215,13 +282,72 @@ h2 {
 		width: 95%;
 	}
 	
-	.col-1-4, .col-2-3, .col-1-3, .col-1-2 {
+	.col-1-4, .col-2-3, .col-1-3, .col-1-2, .col-3-4 {
 		width: 100%;
 	}
 	
-	.col-1-4 {
+	h1 {
+		font-size: 2rem;
+		margin: 0 0 2rem 0;
+		line-height: 2.95rem;
+		font-weight: 400;
+	}
+	
+	/*----- 5.4 - Alignments -----*/
+	#full-name, #email, textarea {
+		width: 23rem;
+	}
+	
+	#about, #about h3 {
+		text-align: left;
+	}
+
+	form #full-name label {
 		text-align: center;
 	}
+	
+	body > header:first-of-type .col-1-2 p a, form p a {
+		padding: 1rem 8.73rem;
+	}
+	
+	#upcoming {
+		text-align: center;
+	}
+
+	body > header:first-of-type {
+	background-size: contain;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-ms-background-size: contain;
+	-moz-background-size: contain;
+	height: 15rem;
+	}
+	
+	.flex-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+	
+	#about h2 {
+		margin: 4rem 0 2rem 0;
+	}
+	
+	#about section:nth-child(3), #about section:last-child {
+		margin-top: 4rem;
+	}
+	
+	#about {
+		background-color: #fff;
+	}
+	
+	#about {
+		padding: 0;
+	}
+	
+	#connect .col-1-2:first-child {
+		margin-top: 6rem;
+	}
+	
 }
 
 
