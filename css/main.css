@@ -115,6 +115,10 @@ fieldset {
 	border: none;
 }
 
+form input, textarea {
+	border: none;
+}
+
 /*----- 1.5 - Lists -----*/
 footer ul li {
 	list-style: none;
@@ -174,7 +178,7 @@ body > header:first-of-type .col-1-2 p a:hover, form p a:hover {
 	background-color: #008793;
 }
 
-#about, footer {
+#about, footer, form input, textarea {
 	background-color: #f2f2f2;
 }
 
